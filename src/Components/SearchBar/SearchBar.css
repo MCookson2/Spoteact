@@ -1,0 +1,39 @@
+.Searchbar {
+    margin-top: 35px;
+}
+
+form {
+    width: 300px;
+    height: 32px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+}
+
+input {
+    all: unset;
+    font-size: 16px;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+    border: 1px solid white;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 32px;
+    border: 1px solid white;
+}
+  
+svg {
+    color: #fff;
+    fill: currentColor;
+    width: 40px;
+    height: 32px;
+    padding: 5px;
+}

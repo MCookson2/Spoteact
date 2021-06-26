@@ -16,9 +16,8 @@ function App() {
                 <h1>Spoteact</h1>
             </header>
             <SearchBar />
-            <div>
-                <SearchResults results={searchResults}/>
-            </div>
+            <SearchResults results={searchResults}/>
+            
         </div>
     );
 }

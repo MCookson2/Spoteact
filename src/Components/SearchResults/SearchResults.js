@@ -7,15 +7,16 @@ function SearchResults(props) {
         const tracks = props.results;
         console.log(tracks)
         return tracks.map(track => (
-            <li key={track.id}>{track.name}, {track.artist}, {track.album}</li>
+            <div key={track.id}>
+                <h3>{track.name}</h3> 
+                <p>{track.artist}  ||  {track.album}</p>
+            </div>
         ))
     }
 
     return (
         <div className="SearchResults">
-            <ul>
-                {listTracks()}
-            </ul>
+            {listTracks()}
         </div>
     )
 }

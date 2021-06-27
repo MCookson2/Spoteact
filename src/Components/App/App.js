@@ -10,6 +10,10 @@ function App() {
     const search = (term) => {
         Spotify.search(term).then(tracks => setSearchResults(tracks))
     }
+
+    useEffect(() => {
+        Spotify.getAccessToken()
+    }, [])
     
     return (
         <div className="App">

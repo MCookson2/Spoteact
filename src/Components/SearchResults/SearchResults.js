@@ -5,7 +5,6 @@ function SearchResults(props) {
 
     const listTracks = () => {
         const tracks = props.results;
-        console.log(tracks)
         return tracks.map(track => (
             <div key={track.id}>
                 <h3>{track.name}</h3> 

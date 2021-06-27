@@ -1,5 +1,7 @@
-const clientID = "f5722c9b8c744d7cbc04254f442c5e45";
-const redirectURI = "http://localhost:3000";
+import { clientId, redirectUri } from "./keys";
+
+const clientID = clientId;
+const redirectURI = redirectUri;
 
 let accessToken;
 

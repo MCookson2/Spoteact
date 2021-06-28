@@ -7,10 +7,17 @@ import Spotify from "../../utils/Spotify.js";
 function App() {
     const [searchResults, setSearchResults] = useState([]);
 
+    /* When user clicks Search button in the SearchBar component - 
+     call to spotify api is made and results saved in searchResults state
+    */
     const search = (term) => {
         Spotify.search(term).then(tracks => setSearchResults(tracks))
     }
 
+    /* useEffect function that calls Spotify.getAccessToken on page load,
+     this triggers redirect to spotify api auth login so users can use
+     the web app straight away. 
+    */
     useEffect(() => {
         Spotify.getAccessToken()
     }, [])
@@ -22,7 +29,6 @@ function App() {
             </header>
             <SearchBar onSearch={search}/>
             <SearchResults results={searchResults}/>
-            
         </div>
     );
 }

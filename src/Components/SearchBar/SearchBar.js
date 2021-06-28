@@ -3,17 +3,18 @@ import './SearchBar.css';
 
 function SearchBar(props) {
 
+    // React useState to store the search term.
     const [term, setTerm] = useState('');
 
+    // Event handler sets the term to currently whatever is typed in the search box.
     const handleChange = (event) => {
         setTerm(event.target.value)
-        
     }
 
     const handleSearch = (event) => {
-        event.preventDefault();
-        console.log(term)
-        props.onSearch(term)
+        event.preventDefault();  // This must be used to prevent default behaviour of HTML forms (page reload)
+        // console.log(term)
+        props.onSearch(term)  // This calls the props function onSearch in App.js with the search term.
     }
 
     return (
@@ -27,7 +28,6 @@ function SearchBar(props) {
                 </button>
             </form>
         </div>
-        
     )
 }
 

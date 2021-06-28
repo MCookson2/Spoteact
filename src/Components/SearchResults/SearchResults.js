@@ -3,6 +3,9 @@ import './SearchResults.css';
 
 function SearchResults(props) {
 
+    // Mapping over searchresults array of objects 
+    // grabs tracks from state and returns each track property cleanly.
+    // want to add more objects from the api here. Such as open song in spotify etc...
     const listTracks = () => {
         const tracks = props.results;
         return tracks.map(track => (
@@ -13,6 +16,7 @@ function SearchResults(props) {
         ))
     }
 
+    // returning SearchResults component, this calls the listTracks() function to render the tracks.
     return (
         <div className="SearchResults">
             {listTracks()}
